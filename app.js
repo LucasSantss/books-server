@@ -1,3 +1,4 @@
+const rotaFavorito = require("./rotas/favorito")
 const rotaLivro = require("./rotas/livro")
 const express = require('express')
 const cors = require('cors')
@@ -7,6 +8,7 @@ app.use(express.json())
 app.use(cors({ origin: '*' })) //todas as origens podem acessar a API
 
 app.use("/livros", rotaLivro)
+app.use('/favoritos', rotaFavorito)
 
 const port = 8000 //npx nodemon app
 
