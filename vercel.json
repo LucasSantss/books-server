@@ -2,8 +2,14 @@
     "version": 2,
     "builds": [
         {
-            "src": "src/app.js",
-            "use": "@vercel/node"
+            "src": "app.js",
+            "use": "@vercel/node",
+            "config": {
+                "includeFiles": [
+                    "livros.json",
+                    "favoritos.json"
+                ]
+            }
         }
     ],
     "routes": [
