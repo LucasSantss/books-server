@@ -5,7 +5,7 @@ const cors = require('cors')
 
 const app = express()
 app.use(express.json())
-app.use(cors({ origin: '/*' })) //todas as origens podem acessar a API
+app.use(cors({ origin: '/' })) //todas as origens podem acessar a API
 
 app.use("/livros", rotaLivro)
 app.use('/favoritos', rotaFavorito)
